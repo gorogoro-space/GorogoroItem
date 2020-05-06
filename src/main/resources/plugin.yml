@@ -1,0 +1,15 @@
+name: GorogoroItem
+version: 1.1
+api-version: 1.15
+description: GorogoroItem
+author: kubotan
+main: space.gorogoro.gorogoroitem.GorogoroItem
+
+commands:
+  gitemget:
+    description: GorogoroItem.
+    usage: |
+      Use /help <command> [subcommand] for more information
+      /<command> phantom [normal|rare] - Get GorogoroItem.
+  gitemget phantom:
+    description:  Get GorogoroItem.
