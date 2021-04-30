@@ -20,8 +20,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class GorogoroItem extends JavaPlugin implements Listener {
 
-  private final static String PHANTOM_GUARD_NORMAL = ChatColor.MAGIC + "space.gorogoro.phantomguard.normal" + ChatColor.RESET;
-  private final static String PHANTOM_GUARD_RARE = ChatColor.MAGIC + "space.gorogoro.phantomguard.rare" + ChatColor.RESET;
+  private final static String PHANTOM_GUARD_NORMAL = "space.gorogoro.phantomguard.normal";
+  private final static String PHANTOM_GUARD_RARE = "space.gorogoro.phantomguard.rare";
 
   @Override
   public void onEnable(){
@@ -82,10 +82,10 @@ public class GorogoroItem extends JavaPlugin implements Listener {
           lore.add(ChatColor.DARK_PURPLE + "宇宙人の文字が書いてある" + ChatColor.RESET);
           if(type.equals("rare")) {
             meta.setDisplayName(ChatColor.GOLD + "[レア]" + ChatColor.RESET + ChatColor.DARK_RED + "ファントムバリア" + ChatColor.RESET);
-            lore.add(ChatColor.DARK_PURPLE + "「" + ChatColor.RESET + PHANTOM_GUARD_RARE + ChatColor.DARK_PURPLE + "」" + ChatColor.RESET);
+            lore.add(ChatColor.DARK_PURPLE + "「" + ChatColor.RESET + ChatColor.MAGIC + PHANTOM_GUARD_RARE + ChatColor.RESET + ChatColor.DARK_PURPLE + "」" + ChatColor.RESET);
           }else {
             meta.setDisplayName(ChatColor.DARK_RED + "ファントムバリア" + ChatColor.RESET);
-            lore.add(ChatColor.DARK_PURPLE + "「" + ChatColor.RESET + PHANTOM_GUARD_NORMAL + ChatColor.DARK_PURPLE + "」" + ChatColor.RESET);
+            lore.add(ChatColor.DARK_PURPLE + "「" + ChatColor.RESET + ChatColor.MAGIC + PHANTOM_GUARD_NORMAL + ChatColor.RESET + ChatColor.DARK_PURPLE + "」" + ChatColor.RESET);
           }
           meta.setLore(lore);
           item.setItemMeta(meta);
