@@ -38,19 +38,19 @@ public class GorogoroItemTask extends BukkitRunnable {
              double y = attackerVec.getY();
              double z = attackerVec.getZ();
              if(target.getLocation().getX() < attacker.getLocation().getX() && attackerVec.getX() < 0) {
-               x = x * rangeGuard * -1.0;
+               x = 4.0D;   // 4.0D = spigot limit.
              } else if(target.getLocation().getX() > attacker.getLocation().getX() && attackerVec.getX() > 0) {
-               x = x * rangeGuard * -1.0;
+               x = -4.0D;
              }
              if(target.getLocation().getY() < attacker.getLocation().getY() && attackerVec.getY() < 0) {
-               y = y * rangeGuard * -1.0;
+               y = 4.0D;
              } else if(target.getLocation().getY() > attacker.getLocation().getY() && attackerVec.getY() > 0) {
-               y = y * rangeGuard * -1.0;
+               y = -4.0D;
              }
              if(target.getLocation().getZ() < attacker.getLocation().getZ() && attackerVec.getZ() < 0) {
-               z = z * rangeGuard * -1.0;
+               z = 4.0D;
              } else if(target.getLocation().getZ() > attacker.getLocation().getZ() && attackerVec.getZ() > 0) {
-               z = z * rangeGuard * -1.0;
+               z = -4.0D;
              }
              attacker.setVelocity(new Vector(x,y,z));
              attacker.damage(5.0);
